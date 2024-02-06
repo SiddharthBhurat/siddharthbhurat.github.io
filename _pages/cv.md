@@ -14,9 +14,7 @@ redirect_from:
 
 ***
 
-Dynamic Robotics Engineer with a proven track record in designing and implementing innovative solutions. Proficient in 
-developing robotic systems, leveraging expertise in robotic arms, AGV, AMR using sensor fusion, control systems, machine 
-learning, and computer vision to drive advancements in smart manufacturing systems and autonomous technologies.
+Passionate Robotics Engineer with a proven track record in design & implementing innovative. Proficient in developing robotic systems by leveraging expertise in robotic arms, autonomous mobile robots (AMR/AGV) using sensor fusion, control systems, machine learning & computer vision to drive advancements in smart manufacturing & autonomous technologies. I am convinced that autonomous mobility holds the key to addressing myriad challenges in both social & commercial sectors. I am actively seeking to leverage my skills to devise innovative solutions for these complex issues.
 
 **Professional Experience**
 
@@ -36,6 +34,7 @@ achieved ±3cm accuracy; incorporated udev rules for USB communication; used inv
 
 * Deployed diverse robots (Toyota HSR, Kuka Kmr, Kawasaki Duaro) with a unified master controller, enabling shared sensing 
 & seamless integration via ROS over WiFi; implemented SLAM, exploration for mapping & A* algorithm using C++  
+* •	Researched on converting a centralized multi robot control & scheduling into a distributed system where all the different robot capabilities intermittently/continuously communicate with each other & gain information from each other
  
 **Itech Robotics and Automation pvt ltd., Pune India** <span style="float:right;">October 2021 – February 2022</span>                                       
 *Intern | Autonomous Mobile Robot Developer* 
@@ -59,10 +58,10 @@ achieved ±3cm accuracy; incorporated udev rules for USB communication; used inv
 * Formulated a constrained nonlinear optimization problem considering shortest path and obstacle avoidance 
 * Implemented nonlinear model predictive control for the defined problem using MATLAB & compared with PID controller
 
-**Distributed Control, Scheduling and Planning of Multi Robot System**  <span style="float:right;">August 2023 – December 2023</span>                            
-* Researched on converting a centralized multi robot control and scheduling into a distributed system where all the different 
-robot capabilities intermittently/continuously communicate with each other & gain information from each other 
-* This type of system which is distributed will help in reducing the communication requirements compared to central system  
+**Loop Closure Detection using CLIP for SLAM (Simultaneous Localization & Mapping)**  <span style="float:right;">January 2023 – April 2023</span>	              
+* Leveraging the vision-language model CLIP, we were able to achieve better accuracy in visual place recognition, surpassing the state-of-the-art (SoTA) performance
+* Integrated our effective semantic loop closure detection system into SLAM setup, elevating its performance
+
 
 **ArmLab | Robotic Arm**  <span style="float:right;">August 2022 – October 2022</span>                                           
 * Employed the Interbotix Robotic (6 DOF) Arm to create a pick and place application using a depth camera 
