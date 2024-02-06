@@ -1,7 +1,29 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "Model Predictive Control Based Path Following and Obstacle Avoidance for a Drone"
+excerpt: "Explore my work in Model Predictive Control, guiding drones with advanced path following and obstacle avoidance capabilities<br/><img src='/images/drone_frame.png'>"
 collection: portfolio
 ---
+<!-- <video width="560" height="315" controls>
+  <source src="/images/drone_vid.mp4" type="video/mp4">
+</video> -->
+<center>
+  <video width="560" height="315" controls>
+    <source src="/images/drone_vid.mp4" type="video/mp4">
+  </video>
+</center>
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+* I successfully defined and linearized the quadcopter’s dynamics, and evaluated its stability. 
+* Further-more, implemented two distinct controllers - Linear Quadratic Regulator (LQR) and Model Predictive Control(MPC) - both of which demonstrated proficiency in trajectory  tracking. 
+
+
+<!-- <center>
+  ![Trajectory of Drone](/images/obstacle_avoidance_traj.png)
+</center> -->
+<!-- <center>
+    ![Trajectory of Drone](/images/obstacle_avoidance_traj.png)
+</center> -->
+
+<img src="/images/obstacle_avoidance_traj.png" alt="Trajectory of Drone" style="display: block; margin: 0 auto;">
+
+
+* Lastly, by adding constraints to the MPC and integrating the Rapidly-exploring Random Tree (RRT) algorithm to LQR, was able to create collision free paths and demonstrated the capability of the controllers to effectively avoid obstacles.
