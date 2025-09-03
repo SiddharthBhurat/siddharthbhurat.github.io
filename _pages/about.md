@@ -8,19 +8,19 @@ redirect_from:
   - /about.html
 ---
 
-🏫 I am a final year graduate student at University of Michigan, Ann Arbor
+🏫 I am a Robotics Engineer with a Master’s degree from the University of Michigan, Ann Arbor.  
 
 
 **🌟 Introduction**
 ---
 
-👋 Greetings! I'm a passionate graduate student in Robotics and Automation Engineering, on a mission to craft projects that blend cutting-edge technology with societal impact. 🤖 My lifelong fascination with robots fueled my dream of simplifying and automating tasks.
+👋 Greetings! I’m a robotics engineer driven by the mission of building technologies that make life simpler, smarter, and more impactful. 🤖 My fascination with robots began early and has evolved into a career dedicated to automation and intelligent systems.
 
-🎓 Pursuing an undergraduate and a graduate degree in Robotics and Automation, my journey has been a deep dive into diverse technologies: from foundational electronics, controllers, processors, and sensors to advanced realms like Linux-based systems, ROS (Robot Operating System), Robot Kinematics, Computer Vision, and Artificial Intelligence.
+🎓 With both undergraduate and graduate degrees in Robotics and Automation, my journey spans from the foundations — electronics, controllers, processors, and sensors — to advanced domains like Linux-based systems, ROS (Robot Operating System), Robot Kinematics, Computer Vision, and Optimal Control.
 
-🛠️ My focus? The fusion of these technologies, particularly in the captivating field of autonomous mobile robots and robotic arms. 🚀 My projects stand as testaments to this commitment, with more innovations in the pipeline.
+🛠️ My work centers on bringing these technologies together, particularly in autonomous mobile robots and robotic arms. 🚀 The projects I’ve built reflect this passion, and I’m constantly pushing toward new innovations.
 
-🔍 Now, as a graduate student, I'm eagerly eyeing a full-time role where I can channel my skills, knowledge, and robotics passion into real-world applications. 
+🔍 I'm always eagerly eyeing problems where I can channel my skills, knowledge, and robotics passion into real-world applications. 
 
 The journey has just begun, miles to go before I sleep 💡!!!
 
