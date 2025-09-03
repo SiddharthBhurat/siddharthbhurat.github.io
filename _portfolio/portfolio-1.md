@@ -12,8 +12,9 @@ collection: portfolio
   </video>
 </center>
 
-* I successfully defined and linearized the quadcopter’s dynamics, and evaluated its stability. 
-* Further-more, implemented two distinct controllers - Linear Quadratic Regulator (LQR) and Model Predictive Control(MPC) - both of which demonstrated proficiency in trajectory  tracking. 
+* Used the non linear dynamics to implement the non linear MPC. This non linear MPC uses non linear optimization tool in matlab that is fmincon. The initial input to this MPC is the initial position of the drone and the optimization task is to generate a control inputs which satisfy the constraints as well as the drone reaching the goal position.
+* This non linear MPC runs until all the control inputs needed to reach the goal position are generated. We have a prediction horizon of 20 which means that after every optimization step, we will have 20 control inputs of which we take the 1st control input and apply it to the drone by forward simulating the drone dynamics using fourth-order runge-kutta method. On doing this we get the new state which is then fed back to the MPC as its initial state and this is performed until drone reaches the 
+goal position.. 
 
 
 <!-- <center>
@@ -23,7 +24,7 @@ collection: portfolio
     ![Trajectory of Drone](/images/obstacle_avoidance_traj.png)
 </center> -->
 
-<img src="/images/obstacle_avoidance_traj.png" alt="Trajectory of Drone" style="display: block; margin: 0 auto;">
+<!-- <img src="/images/obstacle_avoidance_traj.png" alt="Trajectory of Drone" style="display: block; margin: 0 auto;"> -->
 
 
-* Lastly, by adding constraints to the MPC and integrating the Rapidly-exploring Random Tree (RRT) algorithm to LQR, was able to create collision free paths and demonstrated the capability of the controllers to effectively avoid obstacles.
+* In the cost function, we address the error in the state while simultaneously imposing penalties on high acceleration and input actions. This approach aims to mitigate excessively high acceleration maneuvers, which are impractical for the quad-copter’s capabilities. Conversely, we do not impose penalties on the quadcopter’s velocity, as our objective is to enable it to reach the goal state as quickly as possible. The parameters R, Q, and N were manually adjusted through a process of trial and error to achieve smooth performance.
