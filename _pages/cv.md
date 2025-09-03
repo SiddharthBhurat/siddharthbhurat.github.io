@@ -53,7 +53,7 @@ achieved ±3cm accuracy; incorporated udev rules for USB communication; used inv
 
 ***
 
-**Model Predictive Control Based Path Following and Obstacle Avoidance for a Drone**  <span style="float:right;">August 2023 – December 2023</span>                 
+**Model Predictive Control for Drone**  <span style="float:right;">August 2023 – December 2023</span>                 
 * Modeled the drone dynamics in MATLAB using Newton's equations of motion 
 * Formulated a constrained nonlinear optimization problem considering shortest path and obstacle avoidance 
 * Implemented nonlinear model predictive control for the defined problem using MATLAB & compared with PID controller
