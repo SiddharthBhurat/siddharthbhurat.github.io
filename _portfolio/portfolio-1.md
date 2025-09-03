@@ -1,5 +1,5 @@
 ---
-title: "Model Predictive Control Based Path Following and Obstacle Avoidance for a Drone"
+title: "Model Predictive Control for Drone"
 excerpt: "Explore my work in Model Predictive Control, guiding drones with advanced path following and obstacle avoidance capabilities<br/><img src='/images/drone_frame.png'>"
 collection: portfolio
 ---
