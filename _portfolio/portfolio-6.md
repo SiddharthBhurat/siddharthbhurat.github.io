@@ -1,17 +1,30 @@
 ---
-title: "Monocular Depth Estimation for autonomous navigation"
-excerpt: "Raspberry-pi camera, supervised learning, Depth<br/><img src='/images/depth_est.png'>"
+title: "Model Predictive Control for Drone"
+excerpt: "Explore my work in Model Predictive Control, guiding drones with advanced path following and obstacle avoidance capabilities<br/><img src='/images/drone_frame.png'>"
 collection: portfolio
 ---
-
+<!-- <video width="560" height="315" controls>
+  <source src="/images/drone_vid.mp4" type="video/mp4">
+</video> -->
 <center>
   <video width="560" height="315" controls>
-    <source src="/images/depthestimation.mp4" type="video/mp4">
+    <source src="/images/drone_vid.mp4" type="video/mp4">
   </video>
 </center>
 
-* Integrated and implemented the algorithm to use a single camera with reinforcement learning techniques and raspberry pi to estimate depth and ego-motion of the robot's surrounding in order to get the robot a clearer picture of its surrounding and make the navigation well planned.
-* The video above demonstrates real-time monocular depth estimation from the robot.
-* In real time depth estimation, it determines the distance of different objects in front of the robot in form of a depth map which denotes nearer objects and its surrounding by yellow color and as the distance of objects from robot goes on increasing, the color representing depth also goes on changing gradually. 
-* This information can be used by processing the depth maps and extracting information required for navigation.
-* I am still researching on how to optimize this process by implementing reinforcement learning with GPS coordinates and achieve autonomous navigation.
+* Used the non linear dynamics to implement the non linear MPC. This non linear MPC uses non linear optimization tool in matlab that is fmincon. The initial input to this MPC is the initial position of the drone and the optimization task is to generate a control inputs which satisfy the constraints as well as the drone reaching the goal position.
+* This non linear MPC runs until all the control inputs needed to reach the goal position are generated. It has a prediction horizon of 20 which means that after every optimization step, there will be 20 control inputs of which 1st control input is taken and applied to the drone by forward simulating the drone dynamics using fourth-order runge-kutta method. On doing this the new state is received which is then fed back to the MPC as its initial state and this is performed until drone reaches the 
+goal position.
+
+
+<!-- <center>
+  ![Trajectory of Drone](/images/obstacle_avoidance_traj.png)
+</center> -->
+<!-- <center>
+    ![Trajectory of Drone](/images/obstacle_avoidance_traj.png)
+</center> -->
+
+<!-- <img src="/images/obstacle_avoidance_traj.png" alt="Trajectory of Drone" style="display: block; margin: 0 auto;"> -->
+
+
+* In the cost function, the error in the state is addressed while simultaneously imposing penalties on high acceleration and input actions. This approach aims to mitigate excessively high acceleration maneuvers, which are impractical for the quad-copter’s capabilities. Conversely, no penalties imposed on the quadcopter’s velocity, as the objective is to enable it to reach the goal state as quickly as possible. The parameters R, Q, and N were manually adjusted through a process of trial and error to achieve smooth performance.
