@@ -5,16 +5,14 @@ permalink: /research/
 author_profile: true
 ---
 
-## Current Research
-
-Your research content goes here...
-
 ## Research Interests
 
-- Interest 1
-- Interest 2
-- Interest 3
+I am interested in controls and optimization for motion planning in mobile robotics and multi-agent systems.
 
-## Publications
+### Mobile Robotics
 
-Details about your publications...
+- How can we leverage both internal disturbances (e.g., wheel slip, actuator dynamics) and external disturbances (e.g., terrain slope, wind, vibrations) to enhance robot motion rather than simply compensating for them?
+
+### Multi-Agent Systems
+
+- How can we design optimization frameworks for multi-agent systems that go beyond traditional objectives like goal achievement, cost minimization, and energy efficiency to also optimize for system-level metrics such as traffic flow and deadlock avoidance?
