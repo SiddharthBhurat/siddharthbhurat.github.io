@@ -1,6 +1,6 @@
 ---
 title: "Dynamic Path Planning with A Algorithm*"
-excerpt: "A*, Dynamic Obstacle Avoidance"
+excerpt: "A*, Dynamic Obstacle Avoidance<br/><img src='/images/dynamic_path_planning.png'>"
 collection: portfolio
 ---
 <!-- <video width="560" height="315" controls>
