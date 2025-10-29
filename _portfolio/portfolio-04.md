@@ -1,19 +1,30 @@
 ---
-title: "iLQR: Swing-Up of Double Inverted Pendulum"
-excerpt: "LQR, Pendulum, Dynamics<br/><img src='/images/double_inv_pendulum.png'>"
+title: "Model Predictive Control for Drone"
+excerpt: "Explore my work in Model Predictive Control, guiding drone with mpc based trajectory planning and obstacle avoidance<br/><img src='/images/drone_frame.png'>"
 collection: portfolio
 ---
-
 <!-- <video width="560" height="315" controls>
   <source src="/images/drone_vid.mp4" type="video/mp4">
 </video> -->
-<!-- <center>
+<center>
   <video width="560" height="315" controls>
     <source src="/images/drone_vid.mp4" type="video/mp4">
   </video>
-</center> -->
-<img src="/images/double_inv_pendulum.png" alt="" style="display: block; margin: 0 auto;">
+</center>
 
-* The double inverted pendulum is a challenging control problem due to its nonlinear dynamics and unstable equilibrium points. In this project, an application of iterative linear quadratic regulator (iLQR) to the swing-up task of a double inverted pendulum system. 
-* The swing-up task involves raising the pendulum from a stable hanging position to an upright position and then maintaining it there. This is a challenging control problem due to the highly nonlinear and underactuated nature of the system. However, iLQR is a powerful optimization-based control method that can handle such complex systems. The approach involves iteratively solving a sequence of linear quadratic optimal control problems to find a near-optimal control policy for the pendulum system.
-* The effectiveness of this approach was tested through simulation experiments, and show that iLQR can successfully swing up and balance the double inverted pendulum.
+* Used the non linear dynamics to implement the non linear MPC. This non linear MPC uses non linear optimization tool in matlab that is fmincon. The initial input to this MPC is the initial position of the drone and the optimization task is to generate a control inputs which satisfy the constraints as well as the drone reaching the goal position.
+* This non linear MPC runs until all the control inputs needed to reach the goal position are generated. It has a prediction horizon of 20 which means that after every optimization step, there will be 20 control inputs of which 1st control input is taken and applied to the drone by forward simulating the drone dynamics using fourth-order runge-kutta method. On doing this the new state is received which is then fed back to the MPC as its initial state and this is performed until drone reaches the 
+goal position.
+
+
+<!-- <center>
+  ![Trajectory of Drone](/images/obstacle_avoidance_traj.png)
+</center> -->
+<!-- <center>
+    ![Trajectory of Drone](/images/obstacle_avoidance_traj.png)
+</center> -->
+
+<!-- <img src="/images/obstacle_avoidance_traj.png" alt="Trajectory of Drone" style="display: block; margin: 0 auto;"> -->
+
+
+* In the cost function, the error in the state is addressed while simultaneously imposing penalties on high acceleration and input actions. This approach aims to mitigate excessively high acceleration maneuvers, which are impractical for the quad-copter’s capabilities. Conversely, no penalties imposed on the quadcopter’s velocity, as the objective is to enable it to reach the goal state as quickly as possible. The parameters R, Q, and N were manually adjusted through a process of trial and error to achieve smooth performance.
