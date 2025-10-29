@@ -1,5 +1,5 @@
 ---
-title: "Meta Learning Model: Model that learn about Models"
+title: "Meta Learning Model: Model that learns about Models"
 excerpt: "Pytorch, MNIST, CNN<br/><img src='/images/meta_learning_model.png'>"
 collection: portfolio
 ---
