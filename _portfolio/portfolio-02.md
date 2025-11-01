@@ -14,7 +14,7 @@ collection: portfolio
 </center> -->
 <img src="/images/mpc_softening_constraints.png" alt="" style="display: block; margin: 0 auto;">
 
-* This was an implementation of the paper:"", to understand the concept of softening constraints.
+* This was an implementation of the paper:"Trajectory tracking for wheeled mobile robots via model predictive control with softening constraints by Hongjiu Yang, Mingchao Guo, Yuanqing Xia, Lei Cheng", to understand the concept of softening constraints.
 * The feedforward control inputs are calculated from the reference trajectories (assuming the robot is already on the path) while the MPC controller ensures tracking of the reference signal
   * FF controller provides the baseline trajectory
   * MPC controller ensures tracking
@@ -22,4 +22,4 @@ collection: portfolio
   * Guarantees convergence to a feasible solution for a QP
   * Allows for smooth trajectory tracking in presence of external disturbances
 
-<img src="/images/mpc_softening_constraints.png" alt="" style="display: block; margin: 0 auto;">
+<img src="/images/mpc_softening_const_output.png" alt="" style="display: block; margin: 0 auto;">
