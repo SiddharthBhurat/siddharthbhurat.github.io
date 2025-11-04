@@ -1,6 +1,6 @@
 ---
-title: "Trajectory Tracking via MPC with Softening Constraints"
-excerpt: "Differential Drive, MPC, Feedforward Control<br/><img src='/images/mpc_softening_constraints.png'>"
+title: "iLQR: Swing-Up of Double Inverted Pendulum"
+excerpt: "LQR, Pendulum, Dynamics<br/><img src='/images/double_inv_pendulum.png'>"
 collection: portfolio
 ---
 
@@ -12,14 +12,9 @@ collection: portfolio
     <source src="/images/drone_vid.mp4" type="video/mp4">
   </video>
 </center> -->
-<img src="/images/mpc_softening_constraints.png" alt="" style="display: block; margin: 0 auto;">
+<img src="/images/double_inv_pendulum.png" alt="" style="display: block; margin: 0 auto;">
 
-* This was an implementation of the paper:"Trajectory tracking for wheeled mobile robots via model predictive control with softening constraints by Hongjiu Yang, Mingchao Guo, Yuanqing Xia, Lei Cheng", to understand the concept of softening constraints.
-* The feedforward control inputs are calculated from the reference trajectories (assuming the robot is already on the path) while the MPC controller ensures tracking of the reference signal
-  * FF controller provides the baseline trajectory
-  * MPC controller ensures tracking
-* MPC controller incorporates soft constraints on the control signal and control increment
-  * Guarantees convergence to a feasible solution for a QP
-  * Allows for smooth trajectory tracking in presence of external disturbances
-
-<img src="/images/mpc_softening_const_output.png" alt="" style="display: block; margin: 0 auto;">
+* The double inverted pendulum is a challenging control problem due to its nonlinear dynamics and unstable equilibrium points. In this project, an application of iterative linear quadratic regulator (iLQR) to the swing-up task of a double inverted pendulum system. 
+* The swing-up task involves raising the pendulum from a stable hanging position to an upright position and then maintaining it there. This is a challenging control problem due to the highly nonlinear and underactuated nature of the system. However, iLQR is a powerful optimization-based control method that can handle such complex systems. The approach involves iteratively solving a sequence of linear quadratic optimal control problems to find a near-optimal control policy for the pendulum system.
+* The effectiveness of this approach was tested through simulation experiments, and show that iLQR can successfully swing up and balance the double inverted pendulum.
+* Technical details can be found [here](https://drive.google.com/file/d/1-j8sqFAa0B6GxLWss21eYxrdsCY-Jwvh/view?usp=sharing)
