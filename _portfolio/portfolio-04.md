@@ -28,3 +28,5 @@ goal position.
 
 
 * In the cost function, the error in the state is addressed while simultaneously imposing penalties on high acceleration and input actions. This approach aims to mitigate excessively high acceleration maneuvers, which are impractical for the quad-copter’s capabilities. Conversely, no penalties imposed on the quadcopter’s velocity, as the objective is to enable it to reach the goal state as quickly as possible. The parameters R, Q, and N were manually adjusted through a process of trial and error to achieve smooth performance.
+
+* Technical details can be found [here](https://drive.google.com/file/d/1DQF1k3R5GLW5528bzQICUs2KyuStDATn/view?usp=sharing)
