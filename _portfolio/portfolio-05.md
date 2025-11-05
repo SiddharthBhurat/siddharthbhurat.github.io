@@ -1,5 +1,5 @@
 ---
-title: "Experimenting to understand Hamilton Jacobi Reachibility"
+title: "Experimenting to understand Hamilton Jacobi Reachibility (IN PROGRESS)"
 excerpt: "HJR, Path Planning<br/><img src=''>"
 collection: portfolio
 ---
