@@ -18,3 +18,4 @@ collection: portfolio
 * It uses RAG to use the documents to provide the context to the problem being asked to the debugger.
 * A vector database is used to store the indexed document embeddings.
 * It can also pull logs from the robot for a given query in real time and process the information to provide better resolution.
+* It uses Agentic RAG along with LLM to route the query appropriately, use the tools as needed and provide a resolution response.
