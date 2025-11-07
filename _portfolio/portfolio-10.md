@@ -1,9 +1,16 @@
 ---
-title: "Demonstration of Drone Survey and Rescue Operation using ROS"
-excerpt: "ROS, Computer Vision, PID, Tag Detection<br/><img src='/images/drone_survey_res.png'>"
+title: "Experimenting to understand Hamilton Jacobi Reachibility (IN PROGRESS)"
+excerpt: "HJR, Path Planning<br/><img src=''>"
 collection: portfolio
 ---
+<!-- <video width="560" height="315" controls>
+  <source src="/images/drone_vid.mp4" type="video/mp4">
+</video> -->
+<!-- <center>
+  <video width="560" height="315" controls>
+    <source src="/images/drone_vid.mp4" type="video/mp4">
+  </video>
+</center> -->
+<img src="" alt="" style="display: block; margin: 0 auto;">
 
-* Implemented PID Control algorithm to stabilize a drone, navigating it in a defined environment through overhead camera using ROS framework and Python as part of the E-Yantra Robotics Competition, Indian Institute of Technology, Bombay in 2019-2020. 
-* Upscaled the drone by integrating functionalities that help distribute necessities to people in remote areas during a natural calamity
- 
+* Experimenting to get better understanding of hamilton jacobi reachability.

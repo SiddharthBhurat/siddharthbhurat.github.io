@@ -1,20 +1,32 @@
 ---
-title: "Meta Learning Model: Model that learns about Models"
-excerpt: "Pytorch, MNIST, CNN<br/><img src='/images/meta_learning_model.png'>"
+title: "Model Predictive Control for Drone"
+excerpt: "Explore my work in Model Predictive Control, guiding drone with mpc based trajectory planning and obstacle avoidance<br/><img src='/images/drone_frame.png'>"
 collection: portfolio
 ---
-
 <!-- <video width="560" height="315" controls>
   <source src="/images/drone_vid.mp4" type="video/mp4">
 </video> -->
-<!-- <center>
+<center>
   <video width="560" height="315" controls>
     <source src="/images/drone_vid.mp4" type="video/mp4">
   </video>
-</center> -->
-<img src="/images/meta_learning_model.png" alt="" style="display: block; margin: 0 auto;">
+</center>
 
-* In this project we attempt to uncover patterns within the black box of neural networks by training a meta-classifier. 
-* A solid understanding of these inner workings could lead to vast improvements in performance, and increase our confidence that a given model is behaving as we expect. 
-* Our approach consists of first training many binary classifiers on the MNIST dataset, then using this collection of models as a dataset for a meta-model. This meta-model takes weights of an MNIST classifier as input, and classifies them according to which number they were trained to identify. 
-* After much experimentation, we were unable to achieve satisfactory results from the meta-model, but came away with many insights on how to approach the problem in the future.
+* Used the non linear dynamics to implement the non linear MPC. This non linear MPC uses non linear optimization tool in matlab that is fmincon. The initial input to this MPC is the initial position of the drone and the optimization task is to generate a control inputs which satisfy the constraints as well as the drone reaching the goal position.
+* This non linear MPC runs until all the control inputs needed to reach the goal position are generated. It has a prediction horizon of 20 which means that after every optimization step, there will be 20 control inputs of which 1st control input is taken and applied to the drone by forward simulating the drone dynamics using fourth-order runge-kutta method. On doing this the new state is received which is then fed back to the MPC as its initial state and this is performed until drone reaches the 
+goal position.
+
+
+<!-- <center>
+  ![Trajectory of Drone](/images/obstacle_avoidance_traj.png)
+</center> -->
+<!-- <center>
+    ![Trajectory of Drone](/images/obstacle_avoidance_traj.png)
+</center> -->
+
+<!-- <img src="/images/obstacle_avoidance_traj.png" alt="Trajectory of Drone" style="display: block; margin: 0 auto;"> -->
+
+
+* In the cost function, the error in the state is addressed while simultaneously imposing penalties on high acceleration and input actions. This approach aims to mitigate excessively high acceleration maneuvers, which are impractical for the quad-copter’s capabilities. Conversely, no penalties imposed on the quadcopter’s velocity, as the objective is to enable it to reach the goal state as quickly as possible. The parameters R, Q, and N were manually adjusted through a process of trial and error to achieve smooth performance.
+
+* Technical details can be found [here](https://drive.google.com/file/d/1DQF1k3R5GLW5528bzQICUs2KyuStDATn/view?usp=sharing)

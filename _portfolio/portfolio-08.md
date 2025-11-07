@@ -1,16 +1,18 @@
 ---
-title: "MBot - Autonomous Mobile Robot"
-excerpt: "SLAM, Sensor Fusion, Particle Filter, PID<br/><img src='/images/mbot.png'>"
+title: "Dynamic Path Planning with A* Algorithm"
+excerpt: "A*, Dynamic Obstacle Avoidance<br/><img src='/images/dynamic_path_planning.png'>"
 collection: portfolio
 ---
-
-<center>
+<!-- <video width="560" height="315" controls>
+  <source src="/images/drone_vid.mp4" type="video/mp4">
+</video> -->
+<!-- <center>
   <video width="560" height="315" controls>
-    <source src="/images/mbot_vid.mp4" type="video/mp4">
+    <source src="/images/drone_vid.mp4" type="video/mp4">
   </video>
-</center>
+</center> -->
+<img src="/images/dynamic_path_planning.png" alt="" style="display: block; margin: 0 auto;">
 
-* Fabricated an autonomous robot completely from scratch, starting with interfacing different sensors and motors with Raspberry Pi, and then writing the controller for controlling these motors
-* Wrote the complete SLAM algorithm in C++, including localization, mapping, and autonomous navigation
-* Incorporated the path planning algorithm like A* to enhance the robot's path planning capabilities capabilities
-* Solved the kidnapped robot problem by incorporating OpenCV's feature matching algorithm. This allowed to match the incomplete map with the complete map and then localize the robot
+* Developed a two-stage path planning system: global planning for initial route generation and adaptive re-planning for dynamic obstacle avoidance.
+* Implemented a modified A* algorithm that evaluates paths using g-cost (distance from current position) and h-cost (heuristic distance to goal). Modified the standard algorithm by incorporating distance-based obstacle penalization rather than binary collision detection, creating a virtual inflation zone around obstacles to maintain safer clearance margins.
+* The system executes planned paths incrementally, updating the robot's position after each segment. Upon environmental changes, the planner regenerates an optimal path from the new position to the goal, repeating this cycle until successful navigation.

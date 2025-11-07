@@ -1,13 +1,20 @@
 ---
-title: "Robotic Arm"
-excerpt: "Forward and Inverse Kinematics, Path Planning, Computer Vision, Object Detection<br/><img src='/images/robotic_arm.png'>"
+title: "The Debugger: RAG Based Agentic Systems Debugger"
+excerpt: "RAG, LLM, Vector Database, Agent, Tool Use, Systems Connection<br/><img src='/images/debugger_picture.png'>"
 collection: portfolio
 ---
+<!-- <video width="560" height="315" controls>
+  <source src="/images/drone_vid.mp4" type="video/mp4">
+</video> -->
+<!-- <center>
+  <video width="560" height="315" controls>
+    <source src="/images/drone_vid.mp4" type="video/mp4">
+  </video>
+</center> -->
+<img src="/images/debugger_picture.png" alt="" style="display: block; margin: 0 auto;">
 
-<img src="/images/forward_kinematics.png" alt="Frame Assignment" style="display: block; margin: 0 auto;">
-
-* Employed the Interbotix Robotic (6 DOF) Arm to create a pick and place application using a depth camera
-* Computed DH parameters and executed forward and inverse kinematics using Python alongside ROS
-* Devised a block detection algorithm by segmenting blocks using computer vision techniques and calculating their coordinates in the real world using camera intrinsic and extrinsic matrices
-* Utilized the determined world coordinates to guide the end effector of the robotic arm, enabling it to reach the blocks and perform various operations, such as pick and place, stacking, and more
- 
+* AI-driven troubleshooting agent that understands logs, analyzes system behavior, and even hypothesizes root causes like an engineer would.
+* It can be connected to real robots via raspberry pi and mqtt protocol along with the protocol the robot is capable of communicating over.
+* It uses RAG to use the documents to provide the context to the problem being asked to the debugger.
+* A vector database is used to store the indexed document embeddings.
+* It can also pull logs from the robot for a given query in real time and process the information to provide better resolution.
