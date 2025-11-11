@@ -16,7 +16,7 @@ redirect_from:
 
 👋 Greetings! I’m a robotics engineer driven by the mission of building technologies that make life simpler, smarter, and more impactful. 🤖 My fascination with robots began early and has evolved into a career dedicated to automation and intelligent systems.
 
-🎓 With both undergraduate and graduate degrees in Robotics and Automation, my journey spans from the foundations — electronics, controllers, processors, and sensors — to advanced domains like Linux-based systems, ROS (Robot Operating System), Robot Kinematics, Computer Vision, and Optimal Control.
+🎓 With both undergraduate and graduate degrees in Robotics and Automation, my journey spans from the foundations — electronics, controllers, processors, and sensors — to advanced domains like Linux-based systems, ROS (Robot Operating System), Robot Kinematics, Motion Planning, and Optimal Control.
 
 🛠️ My work centers on bringing these technologies together, particularly in autonomous mobile robots and robotic arms. 🚀 The projects I’ve built reflect this passion, and I’m constantly pushing toward new innovations.
 
