@@ -3,26 +3,35 @@ permalink: /
 title: "👋 Hello there, I'm Siddharth 🤖"
 excerpt: "About me"
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
 
-🏫 I am a Robotics Engineer with a Master’s degree from the University of Michigan, Ann Arbor.  
+🎓 I am a **Ph.D. student in Mechanical Engineering at Tufts University**, conducting research in the **SPARC Lab under the guidance of Professor Ryan Cosner**. I hold a Master's degree in Robotics from the **University of Michigan, Ann Arbor**.
 
+### 🌟 About Me
 
-**🌟 Introduction**
----
+🤖 **How can we build robots that are not only safe, but also capable of performing at their full potential?**
 
-👋 Greetings! I’m a robotics engineer driven by the mission of building technologies that make life simpler, smarter, and more impactful. 🤖 My fascination with robots began early and has evolved into a career dedicated to automation and intelligent systems.
+This question lies at the heart of my research and is what drives my passion for robotics.
 
-🎓 With both undergraduate and graduate degrees in Robotics and Automation, my journey spans from the foundations — electronics, controllers, processors, and sensors — to advanced domains like Linux-based systems, ROS (Robot Operating System), Robot Kinematics, Motion Planning, and Optimal Control.
+👋 Hello! I'm Siddharth, a robotics researcher passionate about developing intelligent autonomous systems that can operate **safely, reliably, and efficiently in complex, uncertain, and dynamic environments**. My fascination with robots began at an early age and has since evolved into a pursuit of understanding not just how robots work, but how we can push the boundaries of what they can safely and intelligently achieve.
 
-🛠️ My work centers on bringing these technologies together, particularly in autonomous mobile robots and robotic arms. 🚀 The projects I’ve built reflect this passion, and I’m constantly pushing toward new innovations.
+🎓 My journey in robotics has taken me from the fundamentals of electronics, embedded systems, sensors, and controllers to advanced areas such as motion planning, optimization, safe control and learning.
 
-🔍 I'm always eagerly eyeing problems where I can channel my skills, knowledge, and robotics passion into real-world applications. 
+🛠️ My motivation for pursuing a Ph.D. stems from my experience in the robotics industry, where I witnessed firsthand how ensuring safety often comes at the cost of efficiency and performance. This inspired me to explore a fundamental question: **Why should making robots safer mean making them less capable?**
 
-The journey has just begun, miles to go before I sleep 💡!!!
+🔬 Today, my research focuses on developing **control-theoretic methods that provide rigorous safety guarantees while preserving robot performance**. I am particularly interested in enabling robots to reason about safety, make informed decisions under uncertainty, and adapt their behavior without sacrificing their ability to accomplish tasks effectively.
+
+<!-- 🚀 My broader research vision is to move beyond treating safety as merely a constraint that limits what a robot can do. Instead, I want to explore how safety can be fundamentally integrated into robot intelligence, enabling autonomous systems to act confidently, efficiently, and responsibly in the real world. -->
+
+🔍 I am driven by challenging problems at the intersection of **robotics, control theory, optimization, and learning**, and by the opportunity to translate rigorous theoretical ideas into practical robotic capabilities.
+
+**For me, robotics is more than building machines that move or perform tasks. It is about building intelligent systems we can trust to act safely without losing the capabilities that make them useful.**
+
+✨ *The journey has just begun, miles to go before I sleep!*
+
 
 
 <!-- This is the front page of a website that is powered by the [academicpages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io). -->
