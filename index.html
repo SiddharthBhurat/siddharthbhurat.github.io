@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siddharth Bhurat · Robotics researcher</title>
+<meta name="description" content="Ph.D. student at Tufts University building robots that are both safe and capable.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fafaf8;--surface:#ffffff;--surface-2:#f2f1ed;--text:#1a1a18;--muted:#5f5e5a;--faint:#8a8984;
+  --border:rgba(0,0,0,.09);--accent:#185fa5;--accent-bg:#e6f1fb;--radius:14px;
+  --serif:"Source Serif 4",Georgia,serif;--sans:Inter,system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#121211;--surface:#1b1b1a;--surface-2:#242422;--text:#f1efe8;--muted:#b4b2a9;--faint:#888780;
+  --border:rgba(255,255,255,.1);--accent:#85b7eb;--accent-bg:#0c2a48}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font-weight:600;font-size:15px}
+.links{display:flex;gap:28px;font-size:14px;color:var(--muted)}
+.links a:hover{color:var(--text)}
+.menu-btn{display:none;background:none;border:0;color:var(--text);font-size:22px;cursor:pointer}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:center;padding:88px 0 72px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);background:var(--surface-2);padding:6px 12px;border-radius:999px;margin-bottom:24px}
+.dot{width:7px;height:7px;border-radius:50%;background:#1d9e75}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(34px,5vw,52px);line-height:1.12;letter-spacing:-.01em;margin-bottom:20px}
+.lede{font-size:18px;color:var(--muted);max-width:520px;margin-bottom:32px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:10px;font-size:15px;font-weight:500;border:1px solid var(--border);transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px);background:var(--surface-2)}
+.btn.primary{background:var(--text);color:var(--bg);border-color:var(--text)}
+.btn.primary:hover{background:var(--text);opacity:.9}
+.photo{position:relative;aspect-ratio:4/5;border-radius:24px;overflow:hidden;background:var(--surface-2)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.photo-tag{position:absolute;left:16px;bottom:16px;right:16px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 14px;font-size:13px}
+.photo-tag b{display:block;font-weight:600;font-size:14px}
+.photo-tag span{color:var(--muted)}
+
+/* sections */
+section{padding:56px 0;border-top:1px solid var(--border)}
+.label{font-size:13px;font-weight:500;color:var(--faint);letter-spacing:.04em;text-transform:uppercase;margin-bottom:12px}
+h2{font-family:var(--serif);font-weight:500;font-size:30px;line-height:1.2;margin-bottom:28px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px}
+.card h3{font-size:17px;font-weight:600;margin:12px 0 6px}
+.card p{color:var(--muted);font-size:15px}
+.icon{width:40px;height:40px;border-radius:10px;background:var(--accent-bg);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:20px}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1.4fr;gap:48px}
+.about p{color:var(--muted);font-size:16px;margin-bottom:16px}
+.quote{font-family:var(--serif);font-size:22px;line-height:1.4;border-left:3px solid var(--accent);padding-left:20px}
+.edu{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.edu div{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--border);font-size:15px}
+.edu span{color:var(--muted);text-align:right}
+
+/* projects */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.chip{font:inherit;font-size:14px;padding:8px 16px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;transition:.15s}
+.chip:hover{color:var(--text)}
+.chip.on{background:var(--text);color:var(--bg);border-color:var(--text)}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.proj{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+.proj:hover{transform:translateY(-3px);border-color:var(--faint)}
+.thumb{aspect-ratio:16/10;background:var(--surface-2);overflow:hidden;display:flex;align-items:center;justify-content:center;color:var(--faint);font-size:13px}
+.thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.proj:hover .thumb img{transform:scale(1.04)}
+.proj-body{padding:16px 18px 18px;flex:1;display:flex;flex-direction:column}
+.cat{font-size:12px;font-weight:500;color:var(--accent);margin-bottom:6px}
+.proj h3{font-size:16px;font-weight:600;line-height:1.35;margin-bottom:10px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.tag{font-size:12px;padding:3px 9px;border-radius:6px;background:var(--surface-2);color:var(--muted)}
+.wip{font-size:11px;padding:2px 8px;border-radius:6px;background:#faeeda;color:#854f0b;margin-left:6px;vertical-align:2px}
+
+/* contact */
+.contact{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:48px;text-align:center}
+.contact h2{margin-bottom:12px}
+.contact p{color:var(--muted);margin-bottom:28px}
+.contact .btns{justify-content:center}
+footer{padding:32px 0 48px;text-align:center;font-size:13px;color:var(--faint)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
+
+/* responsive */
+@media (max-width:900px){
+  .projects{grid-template-columns:repeat(2,1fr)}
+  .about{grid-template-columns:1fr;gap:24px}
+}
+@media (max-width:720px){
+  .hero{grid-template-columns:1fr;gap:32px;padding:40px 0 48px}
+  .photo{order:-1;max-width:320px;aspect-ratio:1}
+  .links{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--border)}
+  .links.open{display:flex}
+  .links a{padding:14px 24px;border-top:1px solid var(--border)}
+  .menu-btn{display:block}
+  .grid2,.projects{grid-template-columns:1fr}
+  .contact{padding:32px 20px}
+  section{padding:44px 0}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#" class="logo">Siddharth Bhurat</a>
+    <button class="menu-btn" aria-label="Open menu" id="menuBtn">☰</button>
+    <div class="links" id="links">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#work">Work</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/year-archive/">Blog</a>
+      <a href="/cv/">CV</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <header class="hero">
+    <div>
+      <div class="eyebrow"><span class="dot"></span>Ph.D. student · SPARC Lab, Tufts University</div>
+      <h1>Why should making robots safer mean making them less capable?</h1>
+      <p class="lede">I'm Siddharth, a robotics researcher developing control-theoretic methods that give robots rigorous safety guarantees without sacrificing performance.</p>
+      <div class="btns">
+        <a href="#work" class="btn primary">View my work →</a>
+        <a href="/files/cv.pdf" class="btn">Download CV</a>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="/images/headshot.jpg" alt="Portrait of Siddharth Bhurat">
+      <div class="photo-tag"><b>Greater Boston, MA</b><span>Safe control · Motion planning · Learning</span></div>
+    </div>
+  </header>
+
+  <section id="about" class="reveal">
+    <div class="about">
+      <div>
+        <p class="label">About</p>
+        <p class="quote">Robotics isn't just about building machines that move. It's about building systems we can trust to act safely without losing what makes them useful.</p>
+      </div>
+      <div>
+        <p>My fascination with robots started early and grew from electronics, embedded systems, and sensors into motion planning, optimization, safe control, and learning.</p>
+        <p>Working in the robotics industry, I saw first-hand how safety often comes at the cost of efficiency. That tension is what brought me to a Ph.D. I now work with Professor Ryan Cosner on robots that can reason about safety, make informed decisions under uncertainty, and adapt without giving up on their tasks.</p>
+        <div class="edu">
+          <div><b>Ph.D., Mechanical Engineering</b><span>Tufts University · in progress</span></div>
+          <div><b>M.S., Robotics</b><span>University of Michigan, Ann Arbor</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="research" class="reveal">
+    <p class="label">Research interests</p>
+    <h2>Optimization-based planning and control for robots that share the world</h2>
+    <div class="grid2">
+      <div class="card">
+        <div class="icon">⟳</div>
+        <h3>Mobile robotics</h3>
+        <p>Using internal and external disturbances like wheel slip, terrain slope, and wind to enhance motion rather than only compensating for them. Also physics-informed neural networks that learn how the environment behaves.</p>
+      </div>
+      <div class="card">
+        <div class="icon">⋈</div>
+        <h3>Multi-agent systems</h3>
+        <p>Optimization frameworks that go beyond reaching goals and minimizing cost to optimize system-level outcomes like traffic flow and deadlock avoidance, including active time fields.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="reveal">
+    <p class="label">Selected work</p>
+    <h2>Projects</h2>
+    <div class="filters" id="filters">
+      <button class="chip on" data-f="all">All</button>
+      <button class="chip" data-f="Control">Control</button>
+      <button class="chip" data-f="Planning">Planning</button>
+      <button class="chip" data-f="Learning">Learning</button>
+      <button class="chip" data-f="Hardware">Hardware</button>
+    </div>
+    <div class="projects" id="projects"></div>
+  </section>
+
+  <section class="reveal" style="border-top:0">
+    <div class="contact">
+      <p class="label">Get in touch</p>
+      <h2>Let's talk about safe, capable robots</h2>
+      <p>I'm always open to research collaborations, internships, and good conversations.</p>
+      <div class="btns">
+        <a href="mailto:YOUR_EMAIL" class="btn primary">Email me</a>
+        <a href="https://www.linkedin.com/in/siddharth-bhurat-846282174" class="btn" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/siddharthbhurat4" class="btn" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © <span id="yr"></span> Siddharth Anilkumar Bhurat · <a href="/feed.xml">RSS</a> · <a href="/sitemap/">Sitemap</a>
+</footer>
+
+<script>
+const P = [
+  ["Trajectory tracking via MPC with softening constraints","Control",["MPC","Feedforward","Differential drive"],"05","mpc_softening_constraints.png"],
+  ["iLQR swing-up of a double inverted pendulum","Control",["iLQR","Dynamics"],"06","double_inv_pendulum.png"],
+  ["Model predictive control for drones","Control",["MPC","Obstacle avoidance"],"07","drone_frame.png"],
+  ["Understanding Hamilton–Jacobi reachability","Planning",["HJR","Safety"],"10",null,true],
+  ["Dynamic path planning with A*","Planning",["A*","Dynamic obstacles"],"08","dynamic_path_planning.png"],
+  ["The Debugger: a RAG-based agentic systems debugger","Learning",["RAG","LLM agents","Vector DB"],"09","debugger_picture.png"],
+  ["Loop closure detection using CLIP","Learning",["CLIP","SLAM"],"11","loop_closure_clip.png"],
+  ["Meta-learning: a model that learns about models","Learning",["PyTorch","CNN"],"12","meta_learning_model.png"],
+  ["Monocular depth estimation for navigation","Learning",["Supervised learning","Raspberry Pi"],"16","depth_est.png"],
+  ["MBot: autonomous mobile robot","Hardware",["SLAM","Particle filter","PID"],"13","mbot.png"],
+  ["Robotic arm with computer vision","Hardware",["Inverse kinematics","Object detection"],"14","robotic_arm.png"],
+  ["Drone survey and rescue using ROS","Hardware",["ROS","Tag detection"],"15","drone_survey_res.png"],
+  ["3D printer built from scratch","Hardware",["Marlin","G-code"],"17","printer3d.png"],
+  ["Autonomous robot v1","Hardware",["Arduino","GPS + IMU"],"18","auto_rob_v1.jpg"]
+];
+const grid = document.getElementById("projects");
+function render(f){
+  grid.innerHTML = P.filter(p => f==="all" || p[1]===f).map(p => `
+    <a class="proj" href="/portfolio/portfolio-${p[3]}/">
+      <div class="thumb">${p[4] ? `<img src="/images/${p[4]}" alt="" loading="lazy">` : "Visuals coming soon"}</div>
+      <div class="proj-body">
+        <div class="cat">${p[1]}</div>
+        <h3>${p[0]}${p[5] ? '<span class="wip">In progress</span>' : ""}</h3>
+        <div class="tags">${p[2].map(t => `<span class="tag">${t}</span>`).join("")}</div>
+      </div>
+    </a>`).join("");
+}
+document.getElementById("filters").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if(!b) return;
+  document.querySelectorAll(".chip").forEach(c => c.classList.toggle("on", c===b));
+  render(b.dataset.f);
+});
+render("all");
+
+document.getElementById("menuBtn").addEventListener("click", () => document.getElementById("links").classList.toggle("open"));
+document.querySelectorAll(".links a").forEach(a => a.addEventListener("click", () => document.getElementById("links").classList.remove("open")));
+
+const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} }), {threshold:.12});
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
